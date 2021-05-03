@@ -7,7 +7,7 @@ Project was created on 3/5/2021
 BikeShare data exploration
 
 ### Description
-Bikeshare.py file is coded so that when run, it allows us to understand the bikeshare data.
+Explores bikeshare data from three different cities
 
 ### Files used
 .csv files that include the bikeshare data we needed to explore
