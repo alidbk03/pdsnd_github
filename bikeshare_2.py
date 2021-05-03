@@ -7,14 +7,7 @@ CITY_DATA = { 'Chicago': 'chicago.csv',
               'Washington': 'washington.csv' }
 
 def get_filters():
-    """
-    Asks user to specify a city, month, and day to analyze.
-
-    Returns:
-        (str) city - name of the city to analyze
-        (str) month - name of the month to filter by, or "all" to apply no month filter
-        (str) day - name of the day of week to filter by, or "all" to apply no day filter
-    """
+    
     print('\nHello! Let\'s explore some US bikeshare data!')
     
         # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
@@ -25,8 +18,7 @@ def get_filters():
         continue
       else:
         break
-
-                    
+               
             # TO DO: get user input for month (all, january, february, ... , june)
     while True:
       month = input("Please enter which month you would like to filter by? January, February, March, April, May or June? And if you dont want to filter by a specific month, enter 'all'.\n").title()
@@ -47,18 +39,8 @@ def get_filters():
     print('-'*40) 
     return city, month, day
 
-
 def load_data(city, month, day):
-    """
-    Loads data for the specified city and filters by month and day if applicable.
-
-    Args:Z
-        (str) city - name of the city to analyze
-        (str) month - name of the month to filter by, or "all" to apply no month filter
-        (str) day - name of the day of week to filter by, or "all" to apply no day filter
-    Returns:
-        df - Pandas DataFrame containing city data filtered by month and day
-    """
+    
     df = pd.read_csv(CITY_DATA[city])
 
     df['Start Time'] = pd.to_datetime(df['Start Time'])
